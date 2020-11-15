@@ -1,39 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.mayorquetres;
-
 import java.util.Scanner;
 
-/**
- *
- * @author md
- */
-
 public class tresnumeros {
+
     public static void main(String[] args) {
 
-
         System.out.print("Introduzca el  primer número,: ");
-        Scanner illo = new Scanner(System.in);
-        int n1 = illo.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n1 = sc.nextInt();
         System.out.print("Introduzca el segundo número: ");
-        int n2 = illo.nextInt();
+        int n2 = sc.nextInt();
         System.out.print("Introduzca el tercer número: ");
-        int n3 = illo.nextInt();
+        int n3 = sc.nextInt();
 
-        int numero1 = n1;  //creamos las variables para quitarnos de en medio la repeticion de los numeros
+        int numero1 = n1;
         int numero2 = n2;
         int numero3 = n3;
-
-        if (n1 == n2) { //nos quitamos de en medio sin vale lo mismo
+        //nos quitamos de en medio sin vale lo mismo
+        if (n1 == n2) {
             if (n1 == n3) {
-                System.out.println("el numero es el mismo y es "+ n1);
-                System.exit(0); // salimos
+                System.out.println("el numero es el mismo y es " + n1);
+                System.exit(0);
             }
-        } else { //nos quitamos en medio si los numeros se repiten
+        } else {
             if (n1 != n2) {
                 System.out.println(" n1 y n2 son diferentes");
             } else {
@@ -49,13 +37,13 @@ public class tresnumeros {
             if (n1 != n3) {
                 numero1 = n1;
                 numero3 = n3;
-                System.out.println(" n1 y n2 son diferentes");
+                System.out.println(" n1 n2 son diferentes");
             } else {
                 System.out.println(" son iguales ");
             }
-            //corto el flujo del número repetido
+
         }
-//comprobamos cual es el mayor, que esto en verad seria una funcion, public int esmayor();
+//comprobamos cual es el mayor
         if (numero1 > numero2) {
 
             if (numero1 > numero3) {
@@ -72,8 +60,7 @@ public class tresnumeros {
 
         }
 
-        //comprobamos cual es el menor, que esto en verad seria una funcion a lo public int esmenor()
-
+        //comprobamos cual es el menor
         if (numero1 < numero2) {
 
             if (numero1 < numero3) {
@@ -89,6 +76,5 @@ public class tresnumeros {
             System.out.println("el menor es: " + numero3);
 
         }
-        System.out.println("Fin");
     }
 }
